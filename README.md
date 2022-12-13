@@ -7,6 +7,9 @@
 
 This code is designed to use cycles in controlling a simple 3 wire valve.
 
+## Required Libs
+Repo: wisplib_valve_3wire
+
 ## Usage
 
 ### Cycles
