@@ -3,7 +3,7 @@
 
 # Irrigator
 
-## Hardware: Arduino
+## Hardware: Arduino Uno
 
 This code is designed to use cycles in controlling a simple 3 wire valve.
 
