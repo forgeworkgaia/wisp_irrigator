@@ -48,7 +48,7 @@ Valve (int incId, byte incValveOnPin, byte incValveOffPin, int incMode)
     incMode: Sets cycle characteristics.
 
 
-And then make sure you place the follwoing in loop():
+And then make sure you place the following in loop():
 
 `ValveRun(compostValve, currentMillis);`
 
