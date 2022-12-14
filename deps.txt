@@ -1,0 +1,1 @@
+wisplib_valve_3wire,https://github.com/forgeworkgaia/wislib_valve_3wire.git
