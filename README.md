@@ -31,7 +31,7 @@ The default is case 1, which turns the valve on for five minutes every hour arou
 
 #### How the code works
 
-Every five second this code steps into a function called ValveRun, which tests if its time to take action. Each valve that's defined will need a corresponding run function in loop().
+Every five seconds this code steps into a function called ValveRun, which tests if its time to take action. Each valve that's defined will need a corresponding run function in loop().
 
 Define your valve:
 
