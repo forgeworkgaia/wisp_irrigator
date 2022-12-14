@@ -48,25 +48,25 @@ void ValveRun (Valve & incValve, unsigned long currentMillis){
 
     unsigned long cycleTime = incValve.getCycleTime();
 
-    Serial.println("S1 Current Cycle Time: ");
-    Serial.println(cycleTime);
+    //Serial.println("S1 Current Cycle Time: ");
+    //Serial.println(cycleTime);
     
     float myCycleNum = (float)currentMillis / (float)cycleTime;
 
-    Serial.println("S1 Current Cycle Number: ");
-    Serial.println(myCycleNum);
+    //Serial.println("S1 Current Cycle Number: ");
+    //Serial.println(myCycleNum);
 
     int currentCycle = (int) myCycleNum;
 
     incValve.setCycle(currentCycle);
 
-    Serial.println("S1 Current Cycle: ");
-    Serial.println(currentCycle);
+    //Serial.println("S1 Current Cycle: ");
+    //Serial.println(currentCycle);
 
     float currentCyclePercentage = myCycleNum - incValve.getCycle();
 
-    Serial.println("S1 Current Cycle Percentage: ");
-    Serial.println(currentCyclePercentage, 6);
+    //Serial.println("S1 Current Cycle Percentage: ");
+    //Serial.println(currentCyclePercentage, 6);
 
 
     if(currentCyclePercentage >= incValve.getValveStartPercentage() && currentCyclePercentage <= incValve.getValveStopPercentage() && ! incValve.ValveRunning()){
@@ -74,7 +74,7 @@ void ValveRun (Valve & incValve, unsigned long currentMillis){
             incValve.ValveOn();
 
       
-      }else if (!(currentCyclePercentage >= incValve.getValveStartPercentage() && currentCyclePercentage <= incValve.getValveStopPercentage()) &&  incValve.ValveRunning()  ){
+      }else if (!(currentCyclePercentage >= incValve.getValveStartPercentage() && currentCyclePercentage <= incValve.getValveStopPercentage()) && incValve.ValveRunning()  ){
         
             incValve.ValveOff();
 
