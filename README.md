@@ -53,4 +53,4 @@ Valve (int incId, byte incValveOnPin, byte incValveOffPin, int incMode)
 
 And then make sure you place the following in loop():
 
-`ValveRun(compostValve, currentMillis);`
+`ValveRun(compostValve, currentMillis);` 
