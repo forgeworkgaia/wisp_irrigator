@@ -16,7 +16,7 @@ Repo: wisplib_valve_3wire
 
 ### Cycles
 
-All things in nature run on cycles, so wisps are built on this pattern.
+Nature runs in cycles; wisps are built so.
 
 Cycles are set up on a per valve basis.
 
@@ -24,10 +24,9 @@ Cycles are set up on a per valve basis.
 
 Find the switch case in the [Valve_3wire library](https://github.com/forgeworkgaia/wislib_valve_3wire), required for this wisp.
 
-Each case is set up to be a custom defined cycle.
+Each case you define is used to create a custom cycle, in the event you have multiple valves.
 
 The default is case 1, which turns the valve on for five minutes every hour around the clock.
-
 
 #### How the code works
 
@@ -53,4 +52,4 @@ Valve (int incId, byte incValveOnPin, byte incValveOffPin, int incMode)
 
 And then make sure you place the following in loop():
 
-`ValveRun(compostValve, currentMillis);` 
+`ValveRun(compostValve, currentMillis);`
