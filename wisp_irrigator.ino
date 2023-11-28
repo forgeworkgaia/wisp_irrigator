@@ -53,7 +53,6 @@ void ValveRun (Valve & incValve, unsigned long currentMillis){
       
             incValve.ValveOn();
 
-      
       }else if (!(currentCyclePercentage >= incValve.getValveStartPercentage() && currentCyclePercentage <= incValve.getValveStopPercentage()) && incValve.ValveRunning()  ){
         
             incValve.ValveOff();
