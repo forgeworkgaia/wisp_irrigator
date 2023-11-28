@@ -4,11 +4,6 @@
 // The Irrigator is a wisp that runs an array of motorized 3 wire valves, like US Solid 
 // JFMSV00002.
 //
-//
-//
-//
-
-
 
 #include "Valve_3wire.h"
 
@@ -26,8 +21,6 @@ void setup() {
   compostValve.setCycle(ceil(myCycleNum));
 
   Serial.begin(9600);
-
-
 
 }
 
@@ -47,27 +40,14 @@ void ValveRun (Valve & incValve, unsigned long currentMillis){
 
 
     unsigned long cycleTime = incValve.getCycleTime();
-
-    //Serial.println("S1 Current Cycle Time: ");
-    //Serial.println(cycleTime);
-    
+ 
     float myCycleNum = (float)currentMillis / (float)cycleTime;
-
-    //Serial.println("S1 Current Cycle Number: ");
-    //Serial.println(myCycleNum);
 
     int currentCycle = (int) myCycleNum;
 
     incValve.setCycle(currentCycle);
 
-    //Serial.println("S1 Current Cycle: ");
-    //Serial.println(currentCycle);
-
     float currentCyclePercentage = myCycleNum - incValve.getCycle();
-
-    //Serial.println("S1 Current Cycle Percentage: ");
-    //Serial.println(currentCyclePercentage, 6);
-
 
     if(currentCyclePercentage >= incValve.getValveStartPercentage() && currentCyclePercentage <= incValve.getValveStopPercentage() && ! incValve.ValveRunning()){
       
@@ -78,13 +58,8 @@ void ValveRun (Valve & incValve, unsigned long currentMillis){
         
             incValve.ValveOff();
 
-        
         }
-    
 
-
- 
-  
  }
 
 
